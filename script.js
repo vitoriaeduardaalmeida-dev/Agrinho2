@@ -16,7 +16,7 @@ function reset() {
 // atualiza tudo na tela
 function atualizar() {
 
-  // contador principal (tem que existir no HTML)
+  // contador
   const contador = document.getElementById("contador");
   if (contador) {
     contador.innerText = total;
