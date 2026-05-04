@@ -57,12 +57,12 @@ function mensagem() {
 }
 
 // modo escuro
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
   const temaBtn = document.getElementById("temaBtn");
 
   if (temaBtn) {
-    temaBtn.onclick = function () {
+    temaBtn.addEventListener("click", function () {
       document.body.classList.toggle("dark");
-    };
+    });
   }
-};
+});
