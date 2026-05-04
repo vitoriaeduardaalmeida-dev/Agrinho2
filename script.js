@@ -1,3 +1,4 @@
+// contador global
 let total = 0;
 
 // adiciona ação
@@ -12,35 +13,56 @@ function reset() {
   atualizar();
 }
 
-// atualiza tudo
+// atualiza tudo na tela
 function atualizar() {
-  document.getElementById("contador").innerText = total;
 
-  let porcentagem = total * 10;
-  if (porcentagem > 100) porcentagem = 100;
+  // contador principal (tem que existir no HTML)
+  const contador = document.getElementById("contador");
+  if (contador) {
+    contador.innerText = total;
+  }
 
-  document.getElementById("barra").style.width = porcentagem + "%";
+  // barra de progresso
+  const barra = document.getElementById("barra");
+  if (barra) {
+    let porcentagem = total * 10;
+    if (porcentagem > 100) porcentagem = 100;
+    barra.style.width = porcentagem + "%";
+  }
 
-  let nivel = "Inicial";
-  if (total > 3) nivel = "Intermediário";
-  if (total > 7) nivel = "Avançado";
+  // nível
+  const nivel = document.getElementById("nivel");
+  if (nivel) {
+    let texto = "Inicial";
+    if (total > 3) texto = "Intermediário";
+    if (total > 7) texto = "Avançado";
 
-  document.getElementById("nivel").innerText = "Nível: " + nivel;
+    nivel.innerText = "Nível: " + texto;
+  }
 }
 
 // mensagem personalizada
 function mensagem() {
-  let nome = document.getElementById("nome").value;
+  const nomeInput = document.getElementById("nome");
+  const resposta = document.getElementById("resposta");
 
-  if (nome === "") {
-    document.getElementById("resposta").innerText = "Digite seu nome!";
+  if (!nomeInput || !resposta) return;
+
+  if (nomeInput.value === "") {
+    resposta.innerText = "Digite seu nome!";
   } else {
-    document.getElementById("resposta").innerText =
-      nome + ", você está ajudando o planeta 🌍";
+    resposta.innerText =
+      nomeInput.value + ", você está ajudando o planeta 🌍";
   }
 }
 
-// modo escuro
-document.getElementById("temaBtn").onclick = function () {
-  document.body.classList.toggle("dark");
+// modo escuro (seguro)
+window.onload = function () {
+  const temaBtn = document.getElementById("temaBtn");
+
+  if (temaBtn) {
+    temaBtn.onclick = function () {
+      document.body.classList.toggle("dark");
+    };
+  }
 };
