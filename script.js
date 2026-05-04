@@ -56,7 +56,7 @@ function mensagem() {
   }
 }
 
-// modo escuro (seguro)
+// modo escuro
 window.onload = function () {
   const temaBtn = document.getElementById("temaBtn");
 
