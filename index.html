@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agro Sustentável</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>🌱 Agro Sustentável</h1>
+  <p id="frase">Produção forte com respeito ao meio ambiente</p>
+</header>
+
+<nav>
+  <a href="#info">Informações</a>
+  <a href="#simulador">Simulador</a>
+</nav>
+
+<section id="info">
+  <h2>Por que sustentabilidade?</h2>
+  <p>
+    O agro sustentável garante produção eficiente sem prejudicar o meio ambiente,
+    preservando recursos naturais para o futuro.
+  </p>
+</section>
+
+<section id="simulador">
+  <h2>Simulador de impacto</h2>
+
+  <p>Ações sustentáveis realizadas:</p>
+  <h3 id="numero">0</h3>
+
+  <button onclick="somar()">Adicionar ação</button>
+  <button onclick="resetar()">Resetar</button>
+</section>
+
+<section>
+  <h2>Mensagem personalizada</h2>
+
+  <label>Seu nome:</label>
+  <input type="text" id="nome">
+
+  <button onclick="mostrarMensagem()">Enviar</button>
+
+  <p id="resposta"></p>
+</section>
+
+<section>
+  <h2>Modo visual</h2>
+  <button id="tema">Alternar tema</button>
+</section>
+
+<footer>
+  <p>© 2026 Agro Sustentável</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
