@@ -1,261 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroFuturo</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro Sustentável</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-
-    <nav class="navbar">
-
-        <div class="logo">
-            🌱 AgroFuturo
-        </div>
-
-        <ul class="menu">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#dados">Dados</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-
-        <button id="temaBtn">🌙</button>
-
-    </nav>
-
+  <h1>Agro Forte, Futuro Sustentável</h1>
+  <button onclick="modoEscuro()">🌙 Modo Escuro</button>
 </header>
 
-<section class="hero">
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#galeria">Imagens</a>
+  <a href="#videos">Vídeos</a>
+  <a href="#contato">Contato</a>
+</nav>
 
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-
-        <h1>Agro Forte, Futuro Sustentável</h1>
-
-        <p>
-            Tecnologia, inovação e sustentabilidade trabalhando juntas.
-        </p>
-
-        <a href="https://www.embrapa.br/" target="_blank" class="btn">
-            Conhecer Embrapa
-        </a>
-
-    </div>
-
+<section id="inicio">
+  <h2>Bem-vindo</h2>
+  <p>O agro é essencial para o futuro sustentável com equilíbrio entre produção e meio ambiente.</p>
 </section>
 
-<section id="sobre" class="section">
+<section id="galeria">
+  <h2>Galeria</h2>
 
-    <div class="title">
-        <h2>Sobre o Projeto</h2>
-    </div>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200">
-
-            <div class="card-content">
-
-                <h3>Produção Inteligente</h3>
-
-                <p>
-                    Uso de tecnologia moderna para aumentar a produtividade agrícola.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200">
-
-            <div class="card-content">
-
-                <h3>Sustentabilidade</h3>
-
-                <p>
-                    Preservação ambiental e uso consciente dos recursos naturais.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200">
-
-            <div class="card-content">
-
-                <h3>Inovação</h3>
-
-                <p>
-                    Inteligência artificial, sensores e drones no campo.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+  <div class="grid">
+    <img src="https://via.placeholder.com/300" alt="">
+    <img src="https://via.placeholder.com/300" alt="">
+    <img src="https://via.placeholder.com/300" alt="">
+    <img src="https://via.placeholder.com/300" alt="">
+  </div>
 </section>
 
-<section id="dados" class="section">
+<section id="videos">
+  <h2>Vídeos Educativos</h2>
 
-    <div class="title">
-        <h2>Dados do Agro</h2>
-    </div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/5cK6p4X9x5A" allowfullscreen></iframe>
+  </div>
 
-    <div class="stats">
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/1zXqL3pQ9aA" allowfullscreen></iframe>
+  </div>
 
-        <div class="stat">
-            <h2>75%</h2>
-            <p>Produção sustentável</p>
-        </div>
-
-        <div class="stat">
-            <h2>40%</h2>
-            <p>Economia de água</p>
-        </div>
-
-        <div class="stat">
-            <h2>90%</h2>
-            <p>Energia renovável</p>
-        </div>
-
-    </div>
-
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" allowfullscreen></iframe>
+  </div>
 </section>
 
-<section class="section">
-
-    <div class="title">
-        <h2>Vídeo Sobre Agro Sustentável</h2>
-    </div>
-
-    <div class="video-container">
-
-        <iframe 
-            src="https://www.youtube.com/embed/EtW2rrLHs08"
-            title="Vídeo Agro"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
+<section id="contato">
+  <h2>Contato</h2>
+  <p>Email: contato@agro.com</p>
 </section>
 
-<section id="galeria" class="section galeria-section">
-
-    <div class="title">
-        <h2>Galeria do Agro</h2>
-    </div>
-
-    <div class="galeria">
-
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200">
-
-        <img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1200">
-
-        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200">
-
-        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200">
-
-    </div>
-
-</section>
-
-<section class="section noticias">
-
-    <div class="title">
-        <h2>Notícias do Agro</h2>
-    </div>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200">
-
-            <div class="card-content">
-
-                <h3>Energia Sustentável</h3>
-
-                <p>
-                    Fazendas utilizam energia solar para reduzir impactos ambientais.
-                </p>
-
-                <a href="https://www.embrapa.br/" target="_blank" class="btn">
-                    Ler Mais
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200">
-
-            <div class="card-content">
-
-                <h3>Tecnologia no Campo</h3>
-
-                <p>
-                    Inteligência artificial aumenta produtividade agrícola.
-                </p>
-
-                <a href="https://www.gov.br/agricultura" target="_blank" class="btn">
-                    Ver Notícia
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<footer id="contato">
-
-    <h2>Links Úteis</h2>
-
-    <div class="footer-links">
-
-        <a href="https://www.embrapa.br/" target="_blank">
-            Embrapa
-        </a>
-
-        <a href="https://www.gov.br/agricultura" target="_blank">
-            Ministério da Agricultura
-        </a>
-
-        <a href="https://www.ibama.gov.br/" target="_blank">
-            IBAMA
-        </a>
-
-    </div>
-
-    <p>© 2026 AgroFuturo</p>
-
+<footer>
+  <p>© 2026 Agro Sustentável</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
-
 </html>
