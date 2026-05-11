@@ -1,67 +1,66 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agro Sustentável</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
 <header>
-  <h1>Agro Forte, Futuro Sustentável</h1>
-  <button onclick="modoEscuro()">🌙 Modo Escuro</button>
+    <nav>
+        <h1>Agro Sustentável</h1>
+
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#dados">Dados</a></li>
+        </ul>
+
+        <button id="temaBtn">🌙 Tema</button>
+    </nav>
 </header>
 
-<nav>
-  <a href="#inicio">Início</a>
-  <a href="#galeria">Imagens</a>
-  <a href="#videos">Vídeos</a>
-  <a href="#contato">Contato</a>
-</nav>
-
-<section id="inicio">
-  <h2>Bem-vindo</h2>
-  <p>O agro é essencial para o futuro sustentável com equilíbrio entre produção e meio ambiente.</p>
+<section class="hero">
+    <div class="hero-content">
+        <h2>Agro Forte, Futuro Sustentável</h2>
+        <p>Equilíbrio entre produção e meio ambiente</p>
+    </div>
 </section>
 
-<section id="galeria">
-  <h2>Galeria</h2>
+<section id="sobre">
+    <h2>Sobre o Projeto</h2>
 
-  <div class="grid">
-    <img src="https://via.placeholder.com/300" alt="">
-    <img src="https://via.placeholder.com/300" alt="">
-    <img src="https://via.placeholder.com/300" alt="">
-    <img src="https://via.placeholder.com/300" alt="">
-  </div>
+    <div class="cards">
+        <div class="card">
+            <h3>Produção</h3>
+            <p>Tecnologia e inovação no campo.</p>
+        </div>
+
+        <div class="card">
+            <h3>Sustentabilidade</h3>
+            <p>Preservação ambiental e energia limpa.</p>
+        </div>
+
+        <div class="card">
+            <h3>Futuro</h3>
+            <p>Um agro moderno e inteligente.</p>
+        </div>
+    </div>
 </section>
 
-<section id="videos">
-  <h2>Vídeos Educativos</h2>
+<section id="dados">
+    <h2>Dados do Agro</h2>
 
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/5cK6p4X9x5A" allowfullscreen></iframe>
-  </div>
+    <div class="stats">
+        <div class="stat">
+            <h2>75%</h2>
+            <p>Produção sustentável</p>
+        </div>
 
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/1zXqL3pQ9aA" allowfullscreen></iframe>
-  </div>
+        <div class="stat">
+            <h2>40%</h2>
+            <p>Economia de água</p>
+        </div>
 
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" allowfullscreen></iframe>
-  </div>
-</section>
-
-<section id="contato">
-  <h2>Contato</h2>
-  <p>Email: contato@agro.com</p>
+        <div class="stat">
+            <h2>90%</h2>
+            <p>Energia renovável</p>
+        </div>
+    </div>
 </section>
 
 <footer>
-  <p>© 2026 Agro Sustentável</p>
+    <p>© 2026 Agro Sustentável</p>
 </footer>
-
-<script src="script.js"></script>
-</body>
-</html>
