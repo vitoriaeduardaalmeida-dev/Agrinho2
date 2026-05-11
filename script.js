@@ -1,68 +1,17 @@
-// contador global
-let total = 0;
-
-// adiciona ação
-function add() {
-  total++;
-  atualizar();
-}
-
-// reseta
-function reset() {
-  total = 0;
-  atualizar();
-}
-
-// atualiza tudo na tela
-function atualizar() {
-
-  // contador
-  const contador = document.getElementById("contador");
-  if (contador) {
-    contador.innerText = total;
-  }
-
-  // barra de progresso
-  const barra = document.getElementById("barra");
-  if (barra) {
-    let porcentagem = total * 10;
-    if (porcentagem > 100) porcentagem = 100;
-    barra.style.width = porcentagem + "%";
-  }
-
-  // nível
-  const nivel = document.getElementById("nivel");
-  if (nivel) {
-    let texto = "Inicial";
-    if (total > 3) texto = "Intermediário";
-    if (total > 7) texto = "Avançado";
-
-    nivel.innerText = "Nível: " + texto;
-  }
-}
-
-// mensagem personalizada
-function mensagem() {
-  const nomeInput = document.getElementById("nome");
-  const resposta = document.getElementById("resposta");
-
-  if (!nomeInput || !resposta) return;
-
-  if (nomeInput.value === "") {
-    resposta.innerText = "Digite seu nome!";
-  } else {
-    resposta.innerText =
-      nomeInput.value + ", você está ajudando o planeta 🌍";
-  }
-}
-
-// modo escuro
 document.addEventListener("DOMContentLoaded", function () {
-  const temaBtn = document.getElementById("temaBtn");
 
-  if (temaBtn) {
+    const temaBtn = document.getElementById("temaBtn");
+
     temaBtn.addEventListener("click", function () {
-      document.body.classList.toggle("dark");
+
+        document.body.classList.toggle("dark");
+
+        if(document.body.classList.contains("dark")){
+            temaBtn.innerHTML = "☀️";
+        } else {
+            temaBtn.innerHTML = "🌙";
+        }
+
     });
-  }
+
 });
