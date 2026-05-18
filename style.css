@@ -1,106 +1,77 @@
-/* Reset Geral */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-    min-height: 100vh;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #222;
+  transition: 0.3s;
 }
 
-/* Cabeçalho */
 header {
-    background: linear-gradient(90deg, #2e7d32, #66bb6a);
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background: #2e7d32;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+button {
+  margin-top: 10px;
+  padding: 10px;
+  cursor: pointer;
 }
 
-/* Menu de Navegação */
 nav {
-    background-color: #1b5e20;
-    text-align: center;
-    padding: 12px 0;
+  background: #1b5e20;
+  padding: 10px;
+  text-align: center;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: 0.2s;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
-nav a:hover {
-    color: #a5d6a7;
+section {
+  padding: 20px;
+  text-align: center;
 }
 
-/* Seções (Cards) */
-.caixa {
-    background: white;
-    margin: 30px auto;
-    padding: 25px;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
+/* GALERIA */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
 }
 
-/* Formulário de Contato */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-    width: 100%;
+.grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-input, textarea {
-    padding: 10px;
-    width: 85%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: inherit;
-    box-sizing: border-box;
+/* VIDEOS */
+.video-container {
+  max-width: 500px;
+  margin: 15px auto;
 }
 
-textarea {
-    height: 90px;
-    resize: none;
+.video-container iframe {
+  width: 100%;
+  height: 280px;
+  border-radius: 10px;
 }
 
-/* Botão */
-button {
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
+/* MODO ESCURO */
+.dark {
+  background: #121212;
+  color: white;
 }
 
-button:hover {
-    background-color: #1b5e20;
-    transform: scale(1.03);
+.dark header {
+  background: #000;
 }
 
-/* Mensagem de sucesso do JS */
-#resposta {
-    margin-top: 15px;
-    min-height: 20px;
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1b5e20;
-    color: white;
-    margin-top: 50px;
+.dark nav {
+  background: #222;
 }
