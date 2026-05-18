@@ -6,41 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
 </head>
-
 <body>
 
     <header class="topo">
-        <h1>🌱 Agro Futuro</h1>
-        <p id="frase">Produzir mais, preservando sempre</p>
+        <h1>🌱 Agro Futuro Sustentável</h1>
+        <p id="frase">Produção forte com respeito ao meio ambiente</p>
         <button id="temaBtn">🌙 Tema</button>
     </header>
 
     <nav class="menu">
-        <a href="#impacto">Impacto</a>
-        <a href="#acoes">Ações</a>
+        <a href="#info">Informações</a>
+        <a href="#simulador">Simulador</a>
         <a href="#contato">Contato</a>
     </nav>
 
     <main>
-        <section id="impacto" class="caixa">
-            <h2>Impacto Sustentável</h2>
+        <section id="info" class="caixa">
+            <h2>Por que sustentabilidade?</h2>
+            <p>
+                O agro sustentável garante produção eficiente sem prejudicar o meio ambiente, 
+                preservando recursos naturais para o futuro.
+            </p>
+        </section>
+
+        <section id="simulador" class="caixa">
+            <h2>Simulador Ecológico</h2>
             <p>Simule ações ecológicas:</p>
             <button onclick="adicionarAção()">+ Ação Sustentável</button>
             <h3 id="contador">0</h3>
-        </section>
-
-        <section id="acoes" class="caixa">
-            <h2>Boas práticas</h2>
-            <button onclick="mostrarPráticas()">Mostrar práticas</button>
-            
-            <div id="lista" class="escondido">
-                <ul>
-                    <li>🌱 Plantio consciente</li>
-                    <li>💧 Economia de água</li>
-                    <li>🌳 Preservação ambiental</li>
-                    <li>🚜 Tecnologia no campo</li>
-                </ul>
-            </div>
         </section>
 
         <section id="contato" class="caixa">
