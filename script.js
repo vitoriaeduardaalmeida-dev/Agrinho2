@@ -1,17 +1,22 @@
-const temaBtn = document.getElementById("temaBtn");
+console.log("JavaScript carregado com sucesso!");
 
-temaBtn.onclick = function () {
+window.onload = function() {
+    const formulario = document.getElementById("meuFormulario");
+    const resposta = document.getElementById("resposta");
 
-    document.body.classList.toggle("dark");
-
-    if (document.body.classList.contains("dark")) {
-
-        temaBtn.innerHTML = "☀️";
-
-    } else {
-
-        temaBtn.innerHTML = "🌙";
-
+    if (formulario) {
+        formulario.onsubmit = function(evento) {
+            evento.preventDefault(); // Impede a página de recarregar
+            
+            const nome = document.getElementById("nome").value;
+            
+            if (resposta) {
+                resposta.innerText = "Obrigado pelo contato, " + nome + "! Mensagem enviada.";
+                resposta.style.color = "green";
+                resposta.style.fontWeight = "bold";
+            }
+            
+            formulario.reset(); // Limpa o formulário
+        };
     }
-
 };
