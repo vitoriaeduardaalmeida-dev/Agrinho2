@@ -2,148 +2,147 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroFuturo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+  <title>Agro Inteligente</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
+  <!-- HERO -->
+  <header class="hero">
 
-        <div class="logo">🌱 AgroFuturo</div>
+    <h1>🌱 Agro Inteligente</h1>
 
-        <ul class="menu">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#dados">Dados</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
+    <p>
+      Produção sustentável com tecnologia e preservação ambiental
+    </p>
 
-        <button id="temaBtn">🌙</button>
+    <button id="temaBtn">
+      🌙 Alternar Tema
+    </button>
 
-    </nav>
-</header>
+  </header>
 
-<section class="hero">
-    <div class="overlay"></div>
+  <!-- MENU -->
+  <nav class="menu">
 
-    <div class="hero-content">
-        <h1>Agro Forte, Futuro Sustentável</h1>
-        <p>Tecnologia e sustentabilidade trabalhando juntas.</p>
+    <a href="#impacto">Impacto</a>
 
-        <a class="btn" href="https://www.embrapa.br/" target="_blank">
-            Conhecer Embrapa
-        </a>
-    </div>
-</section>
+    <a href="#grafico">Gráfico</a>
 
-<section id="sobre" class="section">
-    <div class="title">
-        <h2>Sobre o Projeto</h2>
-    </div>
+    <a href="#usuario">Usuário</a>
 
-    <div class="cards">
+  </nav>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1000">
-            <div class="card-content">
-                <h3>Produção Inteligente</h3>
-                <p>Tecnologia aplicada ao campo.</p>
-            </div>
-        </div>
+  <!-- IMPACTO -->
+  <section id="impacto" class="card">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1000">
-            <div class="card-content">
-                <h3>Sustentabilidade</h3>
-                <p>Uso consciente dos recursos naturais.</p>
-            </div>
-        </div>
+    <h2>Simulador Sustentável</h2>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1000">
-            <div class="card-content">
-                <h3>Inovação</h3>
-                <p>Drones, IA e sensores no agro.</p>
-            </div>
-        </div>
+    <p>Ações ecológicas realizadas:</p>
 
-    </div>
-</section>
+    <h1 id="contador">0</h1>
 
-<section id="dados" class="section">
+    <button onclick="add()">
+      + Ação
+    </button>
 
-    <div class="title">
-        <h2>Dados do Agro</h2>
-    </div>
+    <button onclick="reset()">
+      Resetar
+    </button>
 
-    <div class="stats">
+  </section>
 
-        <div class="stat">
-            <h2>75%</h2>
-            <p>Sustentável</p>
-        </div>
+  <!-- GRAFICO -->
+  <section id="grafico" class="card">
 
-        <div class="stat">
-            <h2>40%</h2>
-            <p>Economia de água</p>
-        </div>
+    <h2>Barra de Evolução</h2>
 
-        <div class="stat">
-            <h2>90%</h2>
-            <p>Energia limpa</p>
-        </div>
+    <div class="barra-container">
+
+      <div id="barra" class="barra"></div>
 
     </div>
 
-</section>
+    <p id="nivel">
+      Nível: Inicial
+    </p>
 
-<section class="section">
-    <div class="title">
-        <h2>Vídeo Educativo</h2>
+  </section>
+
+  <!-- USUARIO -->
+  <section id="usuario" class="card">
+
+    <h2>Seu Impacto</h2>
+
+    <label for="nome">
+      Digite seu nome:
+    </label>
+
+    <input type="text" id="nome">
+
+    <button onclick="mensagem()">
+      Confirmar
+    </button>
+
+    <p id="resposta"></p>
+
+  </section>
+
+  <!-- INFORMACOES -->
+  <section class="card">
+
+    <h2>Boas práticas no agro</h2>
+
+    <ul>
+
+      <li>🌿 Preservação ambiental</li>
+
+      <li>💧 Economia de água</li>
+
+      <li>🚜 Tecnologia sustentável</li>
+
+      <li>🌎 Redução de impactos ambientais</li>
+
+    </ul>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 Agro Inteligente
+    </p>
+
+  </footer>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+
+    <div vw-access-button class="active"></div>
+
+    <div vw-plugin-wrapper>
+
+      <div class="vw-plugin-top-wrapper"></div>
+
     </div>
 
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/EtW2rrLHs08" allowfullscreen></iframe>
-    </div>
-</section>
+  </div>
 
-<section id="galeria" class="section">
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 
-    <div class="title">
-        <h2>Galeria</h2>
-    </div>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
-    <div class="galeria">
-
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1000">
-        <img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1000">
-        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1000">
-        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1000">
-
-    </div>
-
-</section>
-
-<footer id="contato">
-
-    <h2>Links úteis</h2>
-
-    <div class="footer-links">
-        <a href="https://www.embrapa.br/" target="_blank">Embrapa</a>
-        <a href="https://www.gov.br/agricultura" target="_blank">Ministério</a>
-        <a href="https://www.ibama.gov.br/" target="_blank">IBAMA</a>
-    </div>
-
-    <p>© 2026 AgroFuturo</p>
-
-</footer>
-
-<script src="script.js"></script>
+  <!-- JS -->
+  <script src="script.js"></script>
 
 </body>
+
 </html>
