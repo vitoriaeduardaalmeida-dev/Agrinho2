@@ -1,157 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Agro Inteligente</title>
-
+  <title>Agro Sustentável</title>
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
+<header>
+  <h1>Agro Forte, Futuro Sustentável</h1>
+  <button onclick="modoEscuro()">🌙 Modo Escuro</button>
+</header>
 
-    <h1>🌱 Agro Inteligente</h1>
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#galeria">Imagens</a>
+  <a href="#videos">Vídeos</a>
+  <a href="#contato">Contato</a>
+</nav>
 
-    <p>
-      Produção sustentável com tecnologia e preservação ambiental
-    </p>
+<section id="inicio">
+  <h2>Bem-vindo</h2>
+  <p>O agro é essencial para o futuro sustentável com equilíbrio entre produção e meio ambiente.</p>
+</section>
 
-    <button id="temaBtn">
-      🌙 Alternar Tema
-    </button>
+<section id="galeria">
+  <h2>Galeria</h2>
 
-  </header>
+  <div class="grid">
+    <img src="https://via.placeholder.com/300" alt="">
+    <img src="https://via.placeholder.com/300" alt="">
+    <img src="https://via.placeholder.com/300" alt="">
+    <img src="https://via.placeholder.com/300" alt="">
+  </div>
+</section>
 
-  <!-- MENU -->
-  <nav class="menu">
+<section id="videos">
+  <h2>Vídeos Educativos</h2>
 
-    <a href="#impacto">Impacto</a>
-
-    <a href="#grafico">Gráfico</a>
-
-    <a href="#usuario">Usuário</a>
-
-  </nav>
-
-  <!-- IMPACTO -->
-  <section id="impacto" class="card">
-
-    <h2>Simulador Sustentável</h2>
-
-    <p>
-      Ações ecológicas realizadas:
-    </p>
-
-    <h1 id="contador">0</h1>
-
-    <button onclick="add()">
-      + Ação
-    </button>
-
-    <button onclick="reset()">
-      Resetar
-    </button>
-
-  </section>
-
-  <!-- BARRA -->
-  <section id="grafico" class="card">
-
-    <h2>Barra de Evolução</h2>
-
-    <div class="barra-container">
-
-      <div id="barra" class="barra"></div>
-
-    </div>
-
-    <p id="nivel">
-      Nível: Inicial
-    </p>
-
-  </section>
-
-  <!-- USUÁRIO -->
-  <section id="usuario" class="card">
-
-    <h2>Seu Impacto</h2>
-
-    <label for="nome">
-      Digite seu nome:
-    </label>
-
-    <br><br>
-
-    <input type="text" id="nome">
-
-    <br><br>
-
-    <button onclick="mensagem()">
-      Confirmar
-    </button>
-
-    <p id="resposta"></p>
-
-  </section>
-
-  <!-- INFORMAÇÕES -->
-  <section class="card">
-
-    <h2>Boas práticas no agro</h2>
-
-    <ul>
-
-      <li>🌿 Preservação ambiental</li>
-
-      <li>💧 Economia de água</li>
-
-      <li>🚜 Tecnologia sustentável</li>
-
-      <li>🌎 Redução de impactos ambientais</li>
-
-    </ul>
-
-  </section>
-
-  <!-- RODAPÉ -->
-  <footer>
-
-    <p>
-      © 2026 Agro Inteligente
-    </p>
-
-  </footer>
-
-  <!-- VLIBRAS -->
-  <div vw class="enabled">
-
-    <div vw-access-button class="active"></div>
-
-    <div vw-plugin-wrapper>
-
-      <div class="vw-plugin-top-wrapper"></div>
-
-    </div>
-
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/5cK6p4X9x5A" allowfullscreen></iframe>
   </div>
 
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/1zXqL3pQ9aA" allowfullscreen></iframe>
+  </div>
 
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" allowfullscreen></iframe>
+  </div>
+</section>
 
-  <!-- JAVASCRIPT -->
-  <script src="script.js"></script>
+<section id="contato">
+  <h2>Contato</h2>
+  <p>Email: contato@agro.com</p>
+</section>
 
+<footer>
+  <p>© 2026 Agro Sustentável</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>
