@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-/* Cabeçalho e Logo */
+/* Cabeçalho */
 header {
     background: linear-gradient(90deg, #2e7d32, #66bb6a);
     color: white;
@@ -24,7 +24,7 @@ header {
 nav {
     background-color: #1b5e20;
     text-align: center;
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
 nav a {
@@ -32,51 +32,53 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-    display: inline-block;
+    transition: 0.2s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #a5d6a7;
 }
 
-/* Seções Principais */
+/* Seções (Cards) */
 .caixa {
     background: white;
     margin: 30px auto;
-    padding: 20px;
+    padding: 25px;
     max-width: 600px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/* Formulários e Inputs */
+/* Formulário de Contato */
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     align-items: center;
+    width: 100%;
 }
 
 input, textarea {
     padding: 10px;
-    width: 80%;
+    width: 85%;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: inherit;
+    box-sizing: border-box;
 }
 
 textarea {
-    height: 80px;
+    height: 90px;
     resize: none;
 }
 
-/* Botões */
+/* Botão */
 button {
     background-color: #2e7d32;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
@@ -85,7 +87,13 @@ button {
 
 button:hover {
     background-color: #1b5e20;
-    transform: scale(1.05);
+    transform: scale(1.03);
+}
+
+/* Mensagem de sucesso do JS */
+#resposta {
+    margin-top: 15px;
+    min-height: 20px;
 }
 
 /* Rodapé */
@@ -94,5 +102,5 @@ footer {
     padding: 20px;
     background-color: #1b5e20;
     color: white;
-    margin-top: 40px;
+    margin-top: 50px;
 }
