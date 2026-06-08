@@ -16,11 +16,11 @@ html{
 body{
     background:linear-gradient(
         135deg,
-        #d8f3dc 0%,
-        #b7e4c7 25%,
-        #95d5b2 50%,
-        #52b788 75%,
-        #2d6a4f 100%
+        #dff6ff 0%,
+        #b8f2e6 25%,
+        #80ed99 50%,
+        #57cc99 75%,
+        #22577a 100%
     );
 
     color:#333;
@@ -38,14 +38,15 @@ header{
 
     background:linear-gradient(
         135deg,
-        #1b4332,
-        #2d6a4f,
-        #40916c
+        #22577a 0%,
+        #38a3a5 30%,
+        #57cc99 65%,
+        #80ed99 100%
     );
 }
 
 .logo{
-    font-size:2rem;
+    font-size:2.5rem;
     font-weight:bold;
     margin-bottom:20px;
 }
@@ -57,26 +58,22 @@ header h1{
 
 header p{
     font-size:1.2rem;
+    max-width:800px;
+    margin:auto;
 }
 
 /* BOTÃO TEMA */
 
 #temaBtn{
     margin-top:20px;
-
     padding:12px 25px;
-
     border:none;
     border-radius:30px;
-
     cursor:pointer;
-
     font-weight:bold;
-
     background:white;
-    color:#2d6a4f;
-
-    transition:.3s;
+    color:#22577a;
+    transition:0.3s;
 }
 
 #temaBtn:hover{
@@ -88,15 +85,13 @@ header p{
 nav{
     background:linear-gradient(
         90deg,
-        #1b4332,
-        #2d6a4f,
-        #40916c
+        #22577a,
+        #38a3a5,
+        #57cc99
     );
 
     padding:15px;
-
     text-align:center;
-
     position:sticky;
     top:0;
     z-index:1000;
@@ -104,35 +99,26 @@ nav{
 
 nav a{
     color:white;
-
     text-decoration:none;
-
     margin:0 15px;
-
     font-weight:bold;
-
-    transition:.3s;
+    transition:0.3s;
 }
 
 nav a:hover{
-    color:#d8f3dc;
+    color:#dff6ff;
 }
 
 /* ACESSIBILIDADE */
 
 #acessibilidade{
     position:fixed;
-
     right:15px;
     top:50%;
-
     transform:translateY(-50%);
-
     display:flex;
     flex-direction:column;
-
     gap:12px;
-
     z-index:9999;
 }
 
@@ -143,12 +129,10 @@ nav a:hover{
     border:none;
     border-radius:50%;
 
-    background:#2d6a4f;
-
+    background:#22577a;
     color:white;
 
     font-size:24px;
-
     cursor:pointer;
 
     box-shadow:0 4px 10px rgba(0,0,0,.3);
@@ -158,15 +142,15 @@ nav a:hover{
 
 #acessibilidade button:hover{
     transform:scale(1.1);
-    background:#1b4332;
+    background:#38a3a5;
 }
 
 /* CAIXAS */
 
 .caixa{
-    background:rgba(255,255,255,.95);
+    background:rgba(255,255,255,.92);
 
-    backdrop-filter:blur(5px);
+    backdrop-filter:blur(8px);
 
     max-width:1100px;
 
@@ -176,14 +160,12 @@ nav a:hover{
 
     border-radius:20px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    box-shadow:0 10px 30px rgba(34,87,122,.25);
 }
 
 .caixa h2{
     text-align:center;
-
-    color:#2d6a4f;
-
+    color:#22577a;
     margin-bottom:20px;
 }
 
@@ -195,21 +177,15 @@ nav a:hover{
 
 .galeria-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
 
 .galeria-grid img{
     width:100%;
     height:250px;
-
     object-fit:cover;
-
     border-radius:15px;
-
     transition:.4s;
 }
 
@@ -224,8 +200,7 @@ nav a:hover{
 }
 
 #videos button{
-    background:#2d6a4f;
-
+    background:#22577a;
     color:white;
 
     border:none;
@@ -244,7 +219,7 @@ nav a:hover{
 }
 
 #videos button:hover{
-    background:#1b4332;
+    background:#38a3a5;
     transform:scale(1.05);
 }
 
@@ -253,18 +228,14 @@ nav a:hover{
 form{
     display:flex;
     flex-direction:column;
-
     gap:15px;
 }
 
 input,
 textarea{
     padding:15px;
-
     border:1px solid #ccc;
-
     border-radius:10px;
-
     font-size:16px;
 }
 
@@ -273,36 +244,30 @@ textarea{
 }
 
 form button{
-    background:#2d6a4f;
-
+    background:#22577a;
     color:white;
-
     border:none;
-
     padding:15px;
-
     border-radius:10px;
-
     cursor:pointer;
+    transition:0.3s;
 }
 
 form button:hover{
-    background:#1b4332;
+    background:#38a3a5;
 }
 
 /* RODAPÉ */
 
 footer{
     text-align:center;
-
     padding:25px;
-
     color:white;
 
     background:linear-gradient(
         90deg,
-        #1b4332,
-        #2d6a4f
+        #22577a,
+        #38a3a5
     );
 }
 
@@ -338,6 +303,10 @@ footer{
 @media(max-width:768px){
 
     header h1{
+        font-size:2rem;
+    }
+
+    .logo{
         font-size:2rem;
     }
 
