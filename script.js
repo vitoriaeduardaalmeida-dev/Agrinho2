@@ -1,20 +1,58 @@
-// Função que você criou para alterar o tema
+// MODO ESCURO
 function modoEscuro() {
-    document.body.classList.toggle("dark");
+    document.body.classList.toggle("dark-mode");
 }
 
-// Função para processar o formulário de contato
-function enviarMensagem(evento) {
-    evento.preventDefault(); // Impede a página de recarregar
-    
-    const nomeInput = document.getElementById("nome");
-    const resposta = document.getElementById("resposta");
-    
-    if (nomeInput && resposta) {
-        resposta.innerText = "Obrigado pelo contato, " + nomeInput.value + "! Mensagem enviada.";
-        resposta.style.color = "green";
-        resposta.style.fontWeight = "bold";
+// FORMULÁRIO
+function enviarMensagem(event) {
+    event.preventDefault();
+
+    document.getElementById("resposta").innerHTML =
+        "✅ Mensagem enviada com sucesso!";
+
+    document.getElementById("meuFormulario").reset();
+}
+
+// ACESSIBILIDADE
+
+let tamanhoFonte = 16;
+
+function ouvirPagina() {
+
+    let texto = document.body.innerText;
+
+    let fala = new SpeechSynthesisUtterance(texto);
+
+    fala.lang = "pt-BR";
+    fala.rate = 1;
+    fala.pitch = 1;
+
+    speechSynthesis.cancel();
+    speechSynthesis.speak(fala);
+}
+
+function pausarLeitura() {
+    speechSynthesis.pause();
+}
+
+function continuarLeitura() {
+    speechSynthesis.resume();
+}
+
+function pararLeitura() {
+    speechSynthesis.cancel();
+}
+
+function aumentarFonte() {
+    tamanhoFonte += 2;
+    document.body.style.fontSize = tamanhoFonte + "px";
+}
+
+function diminuirFonte() {
+
+    if (tamanhoFonte > 10) {
+        tamanhoFonte -= 2;
+        document.body.style.fontSize = tamanhoFonte + "px";
     }
-    
-    document.getElementById("meuFormulario").reset(); // Limpa os campos
+
 }
