@@ -1,8 +1,10 @@
+/* RESET */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 html{
@@ -10,10 +12,9 @@ html{
 }
 
 body{
-    background:#f4f7f4;
+    background:#f5f5f5;
     color:#333;
     line-height:1.6;
-    transition:0.4s;
 }
 
 /* CABEÇALHO */
@@ -21,11 +22,11 @@ body{
 header{
     background:
     linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-    url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1600');
-    
+    url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80');
+
     background-size:cover;
     background-position:center;
-    
+
     min-height:100vh;
 
     display:flex;
@@ -35,6 +36,7 @@ header{
 
     text-align:center;
     color:white;
+
     padding:20px;
 }
 
@@ -46,12 +48,12 @@ header{
 
 header h1{
     font-size:3.5rem;
-    margin-bottom:15px;
+    margin-bottom:20px;
 }
 
 header p{
-    max-width:700px;
     font-size:1.2rem;
+    max-width:700px;
 }
 
 /* BOTÃO TEMA */
@@ -67,6 +69,7 @@ header p{
     color:#2d6a4f;
 
     cursor:pointer;
+    font-size:16px;
     font-weight:bold;
 
     transition:0.3s;
@@ -81,16 +84,15 @@ header p{
 nav{
     background:#1b4332;
 
-    position:sticky;
-    top:0;
-
-    z-index:1000;
-
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
 
     padding:15px;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 nav a{
@@ -108,14 +110,49 @@ nav a:hover{
     color:#95d5b2;
 }
 
-/* SEÇÕES */
+/* ACESSIBILIDADE */
+
+#acessibilidade{
+    background:#2d6a4f;
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    padding:15px;
+}
+
+#acessibilidade button{
+    background:white;
+    color:#2d6a4f;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+#acessibilidade button:hover{
+    transform:translateY(-3px);
+}
+
+/* CAIXAS */
 
 .caixa{
+    background:white;
+
     max-width:1100px;
 
     margin:40px auto;
-
-    background:white;
 
     padding:40px;
 
@@ -127,6 +164,10 @@ nav a:hover{
 .caixa h2{
     color:#2d6a4f;
     margin-bottom:20px;
+    text-align:center;
+}
+
+.caixa p{
     text-align:center;
 }
 
@@ -158,8 +199,32 @@ nav a:hover{
 
 /* VÍDEOS */
 
-iframe{
-    border-radius:15px;
+#videos{
+    text-align:center;
+}
+
+#videos button{
+    background:#2d6a4f;
+    color:white;
+
+    border:none;
+
+    padding:15px 25px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    width:320px;
+
+    transition:.3s;
+}
+
+#videos button:hover{
+    background:#1b4332;
+    transform:scale(1.05);
 }
 
 /* FORMULÁRIO */
@@ -209,6 +274,7 @@ form button:hover{
 
 footer{
     background:#1b4332;
+
     color:white;
 
     text-align:center;
@@ -223,13 +289,13 @@ footer{
     color:white;
 }
 
-.dark-mode nav{
-    background:#081c15;
+.dark-mode .caixa{
+    background:#1f1f1f;
+    color:white;
 }
 
-.dark-mode .caixa{
-    background:#1e1e1e;
-    color:white;
+.dark-mode nav{
+    background:#081c15;
 }
 
 .dark-mode footer{
@@ -238,48 +304,9 @@ footer{
 
 .dark-mode input,
 .dark-mode textarea{
-    background:#2a2a2a;
+    background:#333;
     color:white;
     border:1px solid #555;
-}
-
-/* ACESSIBILIDADE */
-
-#acessibilidade{
-    position:fixed;
-
-    right:20px;
-    bottom:20px;
-
-    display:flex;
-    flex-direction:column;
-
-    gap:10px;
-
-    z-index:9999;
-}
-
-#acessibilidade button{
-    width:55px;
-    height:55px;
-
-    border:none;
-    border-radius:50%;
-
-    background:#2d6a4f;
-    color:white;
-
-    cursor:pointer;
-
-    font-size:18px;
-
-    box-shadow:0 4px 12px rgba(0,0,0,.25);
-
-    transition:0.3s;
-}
-
-#acessibilidade button:hover{
-    transform:scale(1.1);
 }
 
 /* RESPONSIVO */
@@ -299,7 +326,8 @@ footer{
         padding:25px;
     }
 
-    iframe{
-        height:250px;
+    #videos button{
+        width:100%;
     }
+
 }
