@@ -34,22 +34,40 @@
 
         <section id="galeria" class="caixa">
             <h2>Galeria</h2>
+
+            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800"
+                 alt="Agricultura sustentável"
+                 style="width:100%;max-width:500px;border-radius:10px;">
+
             <p>Espaço destinado às fotos dos projetos e tecnologias aplicadas.</p>
         </section>
 
         <section id="videos" class="caixa">
             <h2>Vídeos</h2>
+
+            <iframe width="100%" height="315"
+                src="https://www.youtube.com/embed/4J59H-MI4uQ"
+                title="Vídeo sobre agricultura sustentável"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
             <p>Confira nossas demonstrações e conteúdos explicativos.</p>
         </section>
 
         <section id="contato" class="caixa">
             <h2>Contato</h2>
+
             <form id="meuFormulario" onsubmit="enviarMensagem(event)">
                 <input type="text" id="nome" placeholder="Seu nome" required>
+
                 <input type="email" id="email" placeholder="Seu email" required>
+
                 <textarea placeholder="Digite sua mensagem"></textarea>
+
                 <button type="submit">Enviar</button>
             </form>
+
             <p id="resposta"></p>
         </section>
     </main>
@@ -58,6 +76,36 @@
         <p>© 2026 AgroTech Sustentável</p>
     </footer>
 
+    <!-- Botão de Leitura -->
+    <button id="lerPagina">🔊 Ouvir Página</button>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+        document.getElementById("lerPagina").addEventListener("click", function () {
+            let texto = document.body.innerText;
+            let fala = new SpeechSynthesisUtterance(texto);
+
+            fala.lang = "pt-BR";
+            fala.rate = 1;
+            fala.pitch = 1;
+
+            speechSynthesis.cancel();
+            speechSynthesis.speak(fala);
+        });
+    </script>
+
     <script src="script.js"></script>
+
 </body>
 </html>
