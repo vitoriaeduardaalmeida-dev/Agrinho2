@@ -331,3 +331,45 @@ footer{
     }
 
 }
+
+/* TEMA VERDE */
+
+.tema-verde{
+    background:linear-gradient(135deg,#d8f3dc,#95d5b2,#52b788,#2d6a4f);
+}
+
+/* TEMA AZUL */
+
+.tema-azul{
+    background:linear-gradient(135deg,#caf0f8,#90e0ef,#48cae4,#0077b6);
+}
+
+/* TEMA ROXO */
+
+.tema-roxo{
+    background:linear-gradient(135deg,#e0aaff,#c77dff,#9d4edd,#5a189a);
+}
+
+/* TEMA LARANJA */
+
+.tema-laranja{
+    background:linear-gradient(135deg,#ffd6a5,#ffb703,#fb8500,#e85d04);
+}
+
+/* TEMA ESCURO */
+
+.tema-escuro{
+    background:#121212;
+    color:white;
+}
+
+.temas{
+    margin-top:20px;
+}
+
+.temas select{
+    padding:10px;
+    border-radius:10px;
+    border:none;
+    font-size:16px;
+}
