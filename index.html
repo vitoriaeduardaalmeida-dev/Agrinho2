@@ -21,10 +21,19 @@
             tecnologia e preservação ambiental.
         </p>
 
-        <button id="temaBtn" onclick="modoEscuro()">
-            🌙 Alternar Tema
-        </button>
-    </header>
+<div class="temas">
+
+    <label for="tema">🎨 Escolha um tema:</label>
+
+    <select id="tema" onchange="trocarTema()">
+        <option value="verde">🌱 Verde</option>
+        <option value="azul">🔵 Azul</option>
+        <option value="roxo">🟣 Roxo</option>
+        <option value="laranja">🟠 Laranja</option>
+        <option value="escuro">🌙 Escuro</option>
+    </select>
+
+</div>
 
     <nav>
         <a href="#inicio">Início</a>
