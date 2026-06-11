@@ -56,3 +56,30 @@ function diminuirFonte() {
     }
 
 }
+
+function trocarTema() {
+
+    let tema = document.getElementById("tema").value;
+
+    document.body.className = "";
+
+    if (tema === "verde") {
+        document.body.classList.add("tema-verde");
+    }
+
+    if (tema === "azul") {
+        document.body.classList.add("tema-azul");
+    }
+
+    if (tema === "roxo") {
+        document.body.classList.add("tema-roxo");
+    }
+
+    if (tema === "laranja") {
+        document.body.classList.add("tema-laranja");
+    }
+
+    if (tema === "escuro") {
+        document.body.classList.add("tema-escuro");
+    }
+}
